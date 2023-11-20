@@ -6,6 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Mensaje msg = new Mensaje();
         String nombre = msg.solicitaDatos("Escrbe tu nombre: ");
-        msg.saludar(nombre);
+        String apellidos = msg.solicitaDatos("Escrbe tu apellido: ");
+        PersonaClase p1 = new PersonaClase(nombre, apellidos);
+        msg.saludar(p1);
     }
 }
